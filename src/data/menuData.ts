@@ -12,7 +12,8 @@ export const menuItems: MenuItem[] = [
     prepTime: '8-10 mins',
     spiceLevel: 1,
     rating: 4.6,
-    emoji: '🍜'
+    emoji: '🍜',
+    image: '/images/menu/ramen/ramen.png'
   },
   {
     id: '2',
