@@ -38,7 +38,7 @@ const MenuModal = ({ item, isOpen, onClose }: MenuModalProps) => {
   return (
     <div className="modal-overlay animate-fade-in" onClick={onClose}>
       <div 
-        className="glass-card max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto animate-scale-in"
+        className="glass-card max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto animate-scale-in"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative">
@@ -49,16 +49,39 @@ const MenuModal = ({ item, isOpen, onClose }: MenuModalProps) => {
             <X className="w-5 h-5 text-foreground" />
           </button>
           
-          <div className="p-6">
-            <div className="text-6xl mb-4 animate-float">{item.emoji}</div>
+          {/* Image Section */}
+          <div className="relative h-64 md:h-80 overflow-hidden rounded-t-xl">
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                // Fallback if image doesn't load
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                // Show emoji as fallback
+                const emojiDiv = target.nextElementSibling as HTMLElement;
+                if (emojiDiv) emojiDiv.style.display = 'flex';
+              }}
+            />
             
+            {/* Emoji Fallback */}
+            <div className="absolute inset-0 bg-gradient-dark/80 items-center justify-center text-8xl hidden">
+              {item.emoji}
+            </div>
+
+            {/* Price Badge */}
+            <div className="absolute top-6 right-6 bg-gold text-background px-4 py-2 rounded-full text-lg font-bold shadow-lg">
+              ₹{item.price}
+            </div>
+          </div>
+          
+          <div className="p-6">
             <h2 className="text-3xl font-bold text-gold mb-2 gold-glow">
               {item.name}
             </h2>
             
-            <p className="text-3xl font-bold text-primary mb-4">₹{item.price}</p>
-            
-            <p className="text-muted-foreground mb-6">{item.description}</p>
+            <p className="text-muted-foreground mb-6 text-lg leading-relaxed">{item.description}</p>
             
             <div className="space-y-4">
               <div>
