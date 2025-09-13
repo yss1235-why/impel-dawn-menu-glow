@@ -15,12 +15,7 @@ const Index = () => {
   const filteredItems = useMemo(() => {
     let items = menuItems;
 
-    // Filter by category
-    if (activeCategory !== 'All Items') {
-      items = items.filter(item => item.category === activeCategory);
-    }
-
-    // Filter by search term
+    // Filter by search term first
     if (searchTerm) {
       items = items.filter(item =>
         item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -29,8 +24,31 @@ const Index = () => {
       );
     }
 
+    // Filter by category
+    if (activeCategory !== 'All Items') {
+      items = items.filter(item => item.category === activeCategory);
+    }
+
     return items;
   }, [searchTerm, activeCategory]);
+
+  // Group items by category for "All Items" view
+  const groupedItems = useMemo(() => {
+    if (activeCategory !== 'All Items') {
+      return null;
+    }
+
+    const grouped: { [key: string]: MenuItem[] } = {};
+    
+    filteredItems.forEach(item => {
+      if (!grouped[item.category]) {
+        grouped[item.category] = [];
+      }
+      grouped[item.category].push(item);
+    });
+
+    return grouped;
+  }, [filteredItems, activeCategory]);
 
   const handleItemClick = (item: MenuItem) => {
     setSelectedItem(item);
@@ -40,6 +58,25 @@ const Index = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setTimeout(() => setSelectedItem(null), 300);
+  };
+
+  // Get emoji for category
+  const getCategoryEmoji = (categoryName: string) => {
+    const categoryEmojis: { [key: string]: string } = {
+      'Ramen': '🍜',
+      'Noodles': '🍝',
+      'Cup Noodles': '🍲',
+      'Rolls': '🌯',
+      'Dumplings': '🥟',
+      'Burger': '🍔',
+      'Chili': '🌶️',
+      'Fried Rice': '🍚',
+      'Special': '⭐',
+      'Cold Brew': '🧊',
+      'Shakes': '🥤',
+      'Hot Beverage': '☕'
+    };
+    return categoryEmojis[categoryName] || '🍽️';
   };
 
   return (
@@ -58,7 +95,37 @@ const Index = () => {
             <p className="text-2xl text-muted-foreground">No items found</p>
             <p className="text-sm text-muted-foreground mt-2">Try adjusting your search or filters</p>
           </div>
+        ) : activeCategory === 'All Items' && groupedItems ? (
+          // Grouped view for "All Items"
+          <div className="space-y-12">
+            {Object.entries(groupedItems)
+              .filter(([_, items]) => items.length > 0)
+              .map(([categoryName, items]) => (
+                <section key={categoryName} className="space-y-6">
+                  <div className="text-center">
+                    <h2 className="text-3xl font-bold text-gold gold-glow flex items-center justify-center gap-3">
+                      <span className="text-4xl">{getCategoryEmoji(categoryName)}</span>
+                      {categoryName.toUpperCase()}
+                      <span className="text-4xl">{getCategoryEmoji(categoryName)}</span>
+                    </h2>
+                    <div className="mt-2 h-1 w-24 bg-gradient-gold mx-auto rounded-full"></div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {items.map((item, index) => (
+                      <MenuCard
+                        key={item.id}
+                        item={item}
+                        onClick={() => handleItemClick(item)}
+                        index={index}
+                      />
+                    ))}
+                  </div>
+                </section>
+              ))}
+          </div>
         ) : (
+          // Regular grid view for individual categories
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredItems.map((item, index) => (
               <MenuCard
