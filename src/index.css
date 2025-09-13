@@ -90,18 +90,21 @@
   * {
     @apply border-border;
   }
-  
-  body {
+ body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background: 
-      radial-gradient(circle at 20% 80%, hsl(0 100% 50% / 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(280 100% 50% / 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, hsl(220 100% 50% / 0.1) 0%, transparent 50%),
+      /* Geometric shapes */
+      radial-gradient(circle at 20% 80%, hsl(0 100% 50% / 0.4) 0%, hsl(0 100% 50% / 0.1) 30%, transparent 60%),
+      radial-gradient(circle at 80% 20%, hsl(280 100% 50% / 0.35) 0%, hsl(280 100% 50% / 0.08) 35%, transparent 65%),
+      radial-gradient(circle at 40% 40%, hsl(220 100% 50% / 0.3) 0%, hsl(220 100% 50% / 0.05) 40%, transparent 70%),
+      radial-gradient(ellipse 800px 400px at 60% 10%, hsl(0 100% 50% / 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse 600px 300px at 10% 90%, hsl(280 100% 50% / 0.12) 0%, transparent 50%),
+      /* Base gradient */
       linear-gradient(135deg, 
         hsl(0 0% 2%) 0%, 
         hsl(0 0% 1%) 25%, 
-        hsl(0 0% 3%) 50%, 
+        hsl(0 0% 4%) 50%, 
         hsl(0 0% 1%) 75%, 
         hsl(0 0% 2%) 100%
       );
@@ -110,7 +113,7 @@
     overflow-x: hidden;
   }
   
-  body::before {
+ body::before {
     content: '';
     position: fixed;
     top: 0;
@@ -118,14 +121,18 @@
     width: 100%;
     height: 100%;
     background: 
-      radial-gradient(ellipse 200% 100% at 50% 0%, transparent 40%, hsl(0 100% 50% / 0.05) 100%),
-      radial-gradient(ellipse 200% 100% at 0% 50%, transparent 40%, hsl(280 100% 50% / 0.05) 100%),
-      radial-gradient(ellipse 200% 100% at 100% 50%, transparent 40%, hsl(220 100% 50% / 0.05) 100%);
+      /* Geometric abstract shapes */
+      radial-gradient(ellipse 400px 200px at 25% 25%, hsl(0 100% 50% / 0.2) 0%, transparent 70%),
+      radial-gradient(ellipse 300px 600px at 75% 75%, hsl(280 100% 50% / 0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 500px 250px at 50% 80%, hsl(220 100% 50% / 0.15) 0%, transparent 70%),
+      radial-gradient(circle 200px at 10% 10%, hsl(0 100% 50% / 0.25) 0%, transparent 70%),
+      radial-gradient(circle 150px at 90% 20%, hsl(280 100% 50% / 0.2) 0%, transparent 70%),
+      radial-gradient(circle 180px at 80% 90%, hsl(220 100% 50% / 0.22) 0%, transparent 70%);
     animation: neon-flow 15s ease-in-out infinite;
     z-index: -2;
   }
   
-  body::after {
+ body::after {
     content: '';
     position: fixed;
     top: 0;
@@ -133,10 +140,14 @@
     width: 100%;
     height: 100%;
     background: 
-      linear-gradient(45deg, transparent 30%, hsl(0 100% 50% / 0.02) 50%, transparent 70%),
-      linear-gradient(-45deg, transparent 30%, hsl(280 100% 50% / 0.02) 50%, transparent 70%),
-      linear-gradient(90deg, transparent 30%, hsl(220 100% 50% / 0.02) 50%, transparent 70%);
-    background-size: 400% 400%;
+      /* Flowing wave patterns */
+      linear-gradient(45deg, transparent 20%, hsl(0 100% 50% / 0.08) 35%, transparent 50%, hsl(0 100% 50% / 0.12) 65%, transparent 80%),
+      linear-gradient(-45deg, transparent 25%, hsl(280 100% 50% / 0.06) 40%, transparent 55%, hsl(280 100% 50% / 0.1) 70%, transparent 85%),
+      linear-gradient(90deg, transparent 15%, hsl(220 100% 50% / 0.05) 30%, transparent 45%, hsl(220 100% 50% / 0.08) 60%, transparent 75%),
+      /* Additional geometric lines */
+      linear-gradient(135deg, transparent 40%, hsl(0 100% 50% / 0.04) 50%, transparent 60%),
+      linear-gradient(-135deg, transparent 35%, hsl(280 100% 50% / 0.03) 45%, transparent 55%);
+    background-size: 800% 800%, 600% 600%, 400% 400%, 300% 300%, 500% 500%;
     animation: wave-flow 20s ease-in-out infinite;
     z-index: -1;
   }
