@@ -2,8 +2,8 @@ import { Search } from 'lucide-react';
 
 const Header = ({ searchTerm, onSearchChange }: { searchTerm: string; onSearchChange: (value: string) => void }) => {
   return (
-  <header className="sticky top-0 z-40 border-b border-border/20">
-      <div className="container mx-auto px-4 py-4">
+ <header className="sticky top-0 z-40" style={{background: 'transparent', backgroundColor: 'transparent'}}>
+  <div className="container mx-auto px-4 py-4" style={{background: 'transparent', backgroundColor: 'transparent'}}>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
          <h1 className="text-3xl sm:text-4xl font-bold text-gold gold-glow animate-pulse-glow">
             IMPEL DAWN
