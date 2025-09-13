@@ -9,4 +9,5 @@ export interface MenuItem {
   spiceLevel: number;
   rating: number;
   emoji: string;
+  image: string; // Add this line
 }
