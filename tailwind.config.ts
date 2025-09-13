@@ -71,7 +71,7 @@ export default {
         'gradient-glass': 'var(--gradient-glass)',
         'gradient-shimmer': 'var(--gradient-shimmer)',
       },
-      animation: {
+     animation: {
         'glow': 'glow 2s ease-in-out infinite',
         'shimmer': 'shimmer 3s linear infinite',
         'float': 'float 3s ease-in-out infinite',
@@ -79,6 +79,9 @@ export default {
         'scale-in': 'scale-in 0.3s ease-out',
         'fade-in': 'fade-in 0.5s ease-out',
         'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'neon-flow': 'neon-flow 15s ease-in-out infinite',
+        'wave-flow': 'wave-flow 20s ease-in-out infinite',
+        'card-glow': 'card-glow 8s ease-in-out infinite',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -131,6 +134,46 @@ export default {
         'fade-in': {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        'neon-flow': {
+          '0%, 100%': {
+            transform: 'translateX(0) translateY(0) scale(1)',
+            opacity: '0.6',
+          },
+          '25%': {
+            transform: 'translateX(-10px) translateY(-5px) scale(1.02)',
+            opacity: '0.8',
+          },
+          '50%': {
+            transform: 'translateX(5px) translateY(10px) scale(0.98)',
+            opacity: '0.7',
+          },
+          '75%': {
+            transform: 'translateX(8px) translateY(-8px) scale(1.01)',
+            opacity: '0.9',
+          },
+        },
+        'wave-flow': {
+          '0%': {
+            backgroundPosition: '0% 50%',
+          },
+          '50%': {
+            backgroundPosition: '100% 50%',
+          },
+          '100%': {
+            backgroundPosition: '0% 50%',
+          },
+        },
+      
+        'card-glow': {
+          '0%, 100%': {
+            opacity: '0.3',
+            transform: 'scale(1)',
+          },
+          '50%': {
+            opacity: '0.6',
+            transform: 'scale(1.02)',
+          },
         },
         'pulse-glow': {
           '0%, 100%': {
