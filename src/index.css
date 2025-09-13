@@ -90,6 +90,16 @@
   * {
     @apply border-border;
   }
+  /* Ensure no containers have backgrounds */
+  .container {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+  
+  header {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
  body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
