@@ -85,22 +85,43 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   background: 
-    /* Geometric shapes - Red theme */
-    radial-gradient(circle at 20% 80%, hsl(0 100% 50% / 0.5) 0%, hsl(0 100% 50% / 0.15) 30%, transparent 60%),
-    radial-gradient(circle at 80% 20%, hsl(15 100% 50% / 0.4) 0%, hsl(15 100% 50% / 0.1) 35%, transparent 65%),
-    radial-gradient(circle at 40% 40%, hsl(43 100% 50% / 0.35) 0%, hsl(43 100% 50% / 0.08) 40%, transparent 70%),
-    radial-gradient(ellipse 800px 400px at 60% 10%, hsl(0 100% 50% / 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse 600px 300px at 10% 90%, hsl(330 100% 50% / 0.15) 0%, transparent 50%),
-    /* Base gradient - Dark red */
+    /* Abstract dot pattern */
+    radial-gradient(circle 2px at 20px 30px, hsl(0 85% 45% / 0.15), transparent),
+    radial-gradient(circle 2px at 40px 70px, hsl(15 85% 50% / 0.1), transparent), 
+    radial-gradient(circle 1px at 90px 40px, hsl(43 85% 50% / 0.12), transparent),
+    radial-gradient(circle 1px at 130px 80px, hsl(0 85% 45% / 0.08), transparent),
+    /* Diagonal line pattern */
+    linear-gradient(45deg, transparent 40%, hsl(0 85% 45% / 0.03) 41%, hsl(0 85% 45% / 0.03) 42%, transparent 43%),
+    linear-gradient(-45deg, transparent 60%, hsl(15 85% 50% / 0.02) 61%, hsl(15 85% 50% / 0.02) 62%, transparent 63%),
+    /* Abstract organic shapes */
+    radial-gradient(ellipse 200px 300px at 15% 20%, hsl(0 85% 45% / 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 150px 200px at 85% 80%, hsl(15 85% 50% / 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 300px 150px at 60% 40%, hsl(43 85% 50% / 0.04) 0%, transparent 70%),
+    /* Geometric triangular patterns */
+    conic-gradient(from 0deg at 25% 75%, transparent 0deg, hsl(0 85% 45% / 0.02) 60deg, transparent 120deg),
+    conic-gradient(from 45deg at 75% 25%, transparent 0deg, hsl(15 85% 50% / 0.015) 90deg, transparent 180deg),
+    /* Base gradient - Cream/ivory background */
     linear-gradient(135deg, 
-      hsl(5 20% 2%) 0%, 
-      hsl(0 25% 1%) 25%, 
-      hsl(5 30% 4%) 50%, 
-      hsl(0 25% 1%) 75%, 
-      hsl(5 20% 2%) 100%
+      hsl(45 25% 92%) 0%, 
+      hsl(40 30% 94%) 25%, 
+      hsl(35 25% 96%) 50%, 
+      hsl(40 30% 94%) 75%, 
+      hsl(45 25% 92%) 100%
     );
+  background-size: 
+    160px 110px,
+    140px 130px, 
+    120px 90px,
+    180px 140px,
+    80px 80px,
+    100px 100px,
+    400px 500px,
+    350px 400px,
+    500px 300px,
+    200px 200px,
+    250px 250px,
+    100% 100%;
 }
-
 body::before {
   content: '';
   position: fixed;
