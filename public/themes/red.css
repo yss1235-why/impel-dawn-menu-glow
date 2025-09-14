@@ -142,7 +142,7 @@ body::after {
 
 /* Custom scrollbar - Red theme */
 ::-webkit-scrollbar-track {
-  background: hsl(0 30% 5%);
+  background: hsl(0 30% 10%);
 }
 
 ::-webkit-scrollbar-thumb {
