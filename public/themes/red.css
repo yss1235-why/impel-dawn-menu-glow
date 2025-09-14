@@ -1,17 +1,17 @@
 /* Deep Crimson + Gold Premium Theme */
 :root {
   /* Core Colors - Premium Red Theme */
-  --background: 5 20% 2%;
-  --foreground: 0 85% 85%;
+  --background: 45 25% 92%;
+  --foreground: 0 75% 25%;
   
   /* Card Colors with Red Glow */
-  --card: 0 30% 8%;
-  --card-foreground: 0 85% 85%;
-  --card-glass: 0 40% 12%;
+  --card: 0 0% 98%;
+  --card-foreground: 0 75% 25%;
+  --card-glass: 45 30% 96%;
   
   /* Popover Colors */
-  --popover: 0 35% 6%;
-  --popover-foreground: 0 85% 85%;
+  --popover: 0 0% 98%;
+  --popover-foreground: 0 75% 25%;
   
   /* Primary Deep Crimson Colors */
   --primary: 0 85% 45%;
