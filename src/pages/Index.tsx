@@ -81,7 +81,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-dark">
+   <div className="min-h-screen">
       <Header searchTerm={searchTerm} onSearchChange={setSearchTerm} />
       
       <CategoryNav
