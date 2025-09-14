@@ -603,7 +603,7 @@ body::after {
   display: inline-block;
 }
 
-.restaurant-name::after {
+.restaurant-name::before {
   content: '';
   position: absolute;
   bottom: -8px;
@@ -627,7 +627,7 @@ body::after {
   transition: all 0.3s ease;
 }
 
-.restaurant-name:hover::after {
+.restaurant-name:hover::before {
   box-shadow: 0 0 15px hsl(0 85% 45% / 0.6);
   transition: all 0.3s ease;
 }
