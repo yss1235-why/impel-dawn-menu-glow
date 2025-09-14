@@ -367,14 +367,14 @@ body::after {
   }
 }
 
-@keyframes crimson-card-glow {
+@keyframes cream-card-glow {
   0%, 100% {
-    opacity: 0.3;
+    opacity: 0.2;
     transform: scale(1);
   }
   50% {
-    opacity: 0.6;
-    transform: scale(1.02);
+    opacity: 0.4;
+    transform: scale(1.01);
   }
 }
 
