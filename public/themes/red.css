@@ -206,19 +206,73 @@ body::after {
 
 .glass-card {
   background: 
-    radial-gradient(circle at 30% 30%, hsl(0 100% 50% / 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 70% 70%, hsl(15 100% 50% / 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 50% 90%, hsl(43 100% 50% / 0.06) 0%, transparent 50%),
-    linear-gradient(135deg, hsl(0 40% 12% / 0.8), hsl(0 30% 8% / 0.6));
-  backdrop-filter: blur(16px);
-  border: 1px solid hsl(0 100% 100% / 0.1);
+    radial-gradient(circle at 30% 30%, hsl(0 85% 45% / 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, hsl(15 85% 50% / 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 50% 90%, hsl(43 85% 50% / 0.02) 0%, transparent 50%),
+    linear-gradient(135deg, hsl(0 0% 98% / 0.9), hsl(45 30% 96% / 0.8));
+  backdrop-filter: blur(8px);
+  border: 2px solid transparent;
+  background-clip: padding-box;
   border-radius: 0.75rem;
   box-shadow: 
-    0 8px 32px hsl(0 0% 0% / 0.4),
-    0 0 0 1px hsl(0 100% 100% / 0.05),
-    inset 0 1px 0 hsl(0 100% 100% / 0.1);
+    0 8px 32px hsl(0 85% 45% / 0.15),
+    0 0 0 1px hsl(0 85% 45% / 0.1),
+    inset 0 1px 0 hsl(0 0% 100% / 0.8);
   position: relative;
   transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Golden Border Effect */
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(135deg, 
+    hsl(43 100% 50%) 0%, 
+    hsl(0 85% 45%) 25%, 
+    hsl(43 100% 50%) 50%, 
+    hsl(0 85% 45%) 75%, 
+    hsl(43 100% 50%) 100%
+  );
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  z-index: -1;
+}
+
+/* Moving Golden Dot Animation */
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -8px;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, 
+    hsl(43 100% 60%) 0%, 
+    hsl(43 100% 50%) 30%, 
+    hsl(43 100% 40%) 70%, 
+    transparent 100%
+  );
+  border-radius: 50%;
+  box-shadow: 
+    0 0 10px hsl(43 100% 50%),
+    0 0 20px hsl(43 100% 50% / 0.5),
+    0 0 30px hsl(43 100% 50% / 0.3);
+  animation: golden-dot-travel 3s linear infinite;
+  z-index: 1;
+}
+
+.glass-card:hover::after {
+  animation-duration: 1.5s;
+  box-shadow: 
+    0 0 15px hsl(43 100% 50%),
+    0 0 30px hsl(43 100% 50% / 0.7),
+    0 0 45px hsl(43 100% 50% / 0.5);
 }
 
 .glass-card::before {
@@ -372,7 +426,40 @@ body::after {
     0 2px 4px hsl(0 0% 0% / 0.2),
     inset 0 1px 0 hsl(0 100% 100% / 0.1);
 }
+/* Golden Dot Animation */
+@keyframes golden-dot-travel {
+  0% {
+    left: -8px;
+    top: 2px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    left: 25%;
+    top: 2px;
+  }
+  50% {
+    left: 50%;
+    top: 2px;
+  }
+  75% {
+    left: 75%;
+    top: 2px;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% + 8px);
+    top: 2px;
+    opacity: 0;
+  }
+}
 
+/* Animations - Red Theme */
+@keyframes crimson-flow {
 /* Animations - Red Theme */
 @keyframes crimson-flow {
   0%, 100% {
