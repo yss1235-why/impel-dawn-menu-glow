@@ -243,38 +243,36 @@ body::after {
   -webkit-mask-composite: xor;
   z-index: -1;
 }
-
-/* Moving Golden Dot Animation */
+/* Moving Golden Dot Animation - Small dot moving along border */
 .glass-card::after {
   content: '';
   position: absolute;
-  top: 2px;
-  left: -8px;
-  width: 8px;
-  height: 8px;
+  top: -2px;
+  left: -2px;
+  width: 4px;
+  height: 4px;
   background: radial-gradient(circle, 
-    hsl(43 100% 60%) 0%, 
-    hsl(43 100% 50%) 30%, 
-    hsl(43 100% 40%) 70%, 
+    hsl(43 100% 70%) 0%, 
+    hsl(43 100% 60%) 40%, 
+    hsl(43 100% 50%) 80%, 
     transparent 100%
   );
   border-radius: 50%;
   box-shadow: 
-    0 0 10px hsl(43 100% 50%),
-    0 0 20px hsl(43 100% 50% / 0.5),
-    0 0 30px hsl(43 100% 50% / 0.3);
-  animation: golden-dot-travel 3s linear infinite;
-  z-index: 1;
+    0 0 6px hsl(43 100% 50%),
+    0 0 12px hsl(43 100% 50% / 0.6),
+    0 0 18px hsl(43 100% 50% / 0.3);
+  animation: golden-dot-border 8s linear infinite;
+  z-index: 2;
 }
 
 .glass-card:hover::after {
-  animation-duration: 1.5s;
+  animation-duration: 5s;
   box-shadow: 
-    0 0 15px hsl(43 100% 50%),
-    0 0 30px hsl(43 100% 50% / 0.7),
-    0 0 45px hsl(43 100% 50% / 0.5);
+    0 0 8px hsl(43 100% 50%),
+    0 0 16px hsl(43 100% 50% / 0.8),
+    0 0 24px hsl(43 100% 50% / 0.5);
 }
-
 .glass-card::before {
   content: '';
   position: absolute;
@@ -426,35 +424,60 @@ body::after {
     0 2px 4px hsl(0 0% 0% / 0.2),
     inset 0 1px 0 hsl(0 100% 100% / 0.1);
 }
-/* Golden Dot Animation */
-@keyframes golden-dot-travel {
+/* Golden Dot Border Animation - Travels around perimeter */
+@keyframes golden-dot-border {
+  /* Start at top-left corner */
   0% {
-    left: -8px;
-    top: 2px;
-    opacity: 0;
-  }
-  10% {
+    top: -2px;
+    left: -2px;
     opacity: 1;
   }
+  
+  /* Move along top edge */
+  24% {
+    top: -2px;
+    left: calc(100% - 2px);
+    opacity: 1;
+  }
+  
+  /* Move along right edge */
   25% {
-    left: 25%;
-    top: 2px;
+    top: -2px;
+    left: calc(100% - 2px);
   }
-  50% {
-    left: 50%;
-    top: 2px;
-  }
-  75% {
-    left: 75%;
-    top: 2px;
-  }
-  90% {
+  49% {
+    top: calc(100% - 2px);
+    left: calc(100% - 2px);
     opacity: 1;
   }
+  
+  /* Move along bottom edge */
+  50% {
+    top: calc(100% - 2px);
+    left: calc(100% - 2px);
+  }
+  74% {
+    top: calc(100% - 2px);
+    left: -2px;
+    opacity: 1;
+  }
+  
+  /* Move along left edge */
+  75% {
+    top: calc(100% - 2px);
+    left: -2px;
+  }
+  99% {
+    top: -2px;
+    left: -2px;
+    opacity: 1;
+  }
+  
+  /* Complete the loop */
   100% {
-    left: calc(100% + 8px);
-    top: 2px;
-    opacity: 0;
+    top: -2px;
+    left: -2px;
+    opacity: 1;
   }
 }
 
