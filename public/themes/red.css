@@ -1,0 +1,432 @@
+/* Deep Crimson + Gold Premium Theme */
+:root {
+  /* Core Colors - Premium Red Theme */
+  --background: 5 20% 2%;
+  --foreground: 0 85% 85%;
+  
+  /* Card Colors with Red Glow */
+  --card: 0 30% 8%;
+  --card-foreground: 0 85% 85%;
+  --card-glass: 0 40% 12%;
+  
+  /* Popover Colors */
+  --popover: 0 35% 6%;
+  --popover-foreground: 0 85% 85%;
+  
+  /* Primary Deep Crimson Colors */
+  --primary: 0 85% 45%;
+  --primary-foreground: 0 0% 5%;
+  --primary-glow: 0 85% 55%;
+  --primary-shimmer: 0 85% 70%;
+  
+  /* Secondary Dark Burgundy Colors */
+  --secondary: 0 60% 15%;
+  --secondary-foreground: 0 85% 75%;
+  
+  /* Muted Colors */
+  --muted: 0 30% 20%;
+  --muted-foreground: 0 20% 60%;
+  
+  /* Accent Gold Colors (Luxury Touch) */
+  --accent: 43 100% 50%;
+  --accent-foreground: 0 0% 5%;
+  --accent-glow: 43 100% 55%;
+  
+  /* Destructive Colors */
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 98%;
+  
+  /* Border & Input */
+  --border: 0 60% 25%;
+  --input: 0 40% 8%;
+  --ring: 0 85% 45%;
+  
+  /* Red/Gold Variations */
+  --gold: 0 85% 45%;
+  --gold-light: 0 85% 60%;
+  --gold-dark: 0 75% 30%;
+  
+  /* Neon Colors - Red Spectrum */
+  --neon-red: 0 100% 50%;
+  --neon-orange: 15 100% 50%;
+  --neon-amber: 30 100% 50%;
+  --neon-gold: 43 100% 50%;
+  --neon-pink: 330 100% 50%;
+  --neon-purple: 300 80% 50%;
+  
+  /* Spice Level Colors - Red Theme */
+  --spice-1: 45 70% 50%;
+  --spice-2: 25 85% 50%;
+  --spice-3: 15 95% 50%;
+  --spice-4: 5 100% 50%;
+  --spice-5: 0 100% 45%;
+  
+  /* Gradients - Red Theme */
+  --gradient-gold: linear-gradient(135deg, hsl(0 85% 45%), hsl(0 85% 60%), hsl(0 85% 45%));
+  --gradient-dark: linear-gradient(180deg, hsl(5 20% 2%), hsl(0 25% 4%), hsl(5 15% 1%));
+  --gradient-glass: linear-gradient(135deg, hsl(0 40% 15% / 0.8), hsl(0 30% 10% / 0.6));
+  --gradient-shimmer: linear-gradient(90deg, transparent, hsl(0 85% 55% / 0.3), transparent);
+  --gradient-neon: linear-gradient(45deg, hsl(0 100% 50% / 0.3), hsl(15 100% 50% / 0.3), hsl(43 100% 50% / 0.3));
+  
+  --radius: 1rem;
+  
+  /* Sidebar */
+  --sidebar-background: 0 30% 8%;
+  --sidebar-foreground: 0 85% 85%;
+  --sidebar-primary: 0 85% 45%;
+  --sidebar-primary-foreground: 0 0% 5%;
+  --sidebar-accent: 0 60% 15%;
+  --sidebar-accent-foreground: 0 85% 75%;
+  --sidebar-border: 0 60% 25%;
+  --sidebar-ring: 0 85% 45%;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  background: 
+    /* Geometric shapes - Red theme */
+    radial-gradient(circle at 20% 80%, hsl(0 100% 50% / 0.5) 0%, hsl(0 100% 50% / 0.15) 30%, transparent 60%),
+    radial-gradient(circle at 80% 20%, hsl(15 100% 50% / 0.4) 0%, hsl(15 100% 50% / 0.1) 35%, transparent 65%),
+    radial-gradient(circle at 40% 40%, hsl(43 100% 50% / 0.35) 0%, hsl(43 100% 50% / 0.08) 40%, transparent 70%),
+    radial-gradient(ellipse 800px 400px at 60% 10%, hsl(0 100% 50% / 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse 600px 300px at 10% 90%, hsl(330 100% 50% / 0.15) 0%, transparent 50%),
+    /* Base gradient - Dark red */
+    linear-gradient(135deg, 
+      hsl(5 20% 2%) 0%, 
+      hsl(0 25% 1%) 25%, 
+      hsl(5 30% 4%) 50%, 
+      hsl(0 25% 1%) 75%, 
+      hsl(5 20% 2%) 100%
+    );
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    /* Geometric abstract shapes - Red spectrum */
+    radial-gradient(ellipse 400px 200px at 25% 25%, hsl(0 100% 50% / 0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 300px 600px at 75% 75%, hsl(15 100% 50% / 0.2) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 250px at 50% 80%, hsl(43 100% 50% / 0.18) 0%, transparent 70%),
+    radial-gradient(circle 200px at 10% 10%, hsl(0 100% 50% / 0.3) 0%, transparent 70%),
+    radial-gradient(circle 150px at 90% 20%, hsl(330 100% 50% / 0.22) 0%, transparent 70%),
+    radial-gradient(circle 180px at 80% 90%, hsl(15 100% 50% / 0.25) 0%, transparent 70%);
+  animation: crimson-flow 15s ease-in-out infinite;
+  z-index: -2;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    /* Flowing wave patterns - Red theme */
+    linear-gradient(45deg, transparent 20%, hsl(0 100% 50% / 0.1) 35%, transparent 50%, hsl(0 100% 50% / 0.15) 65%, transparent 80%),
+    linear-gradient(-45deg, transparent 25%, hsl(15 100% 50% / 0.08) 40%, transparent 55%, hsl(15 100% 50% / 0.12) 70%, transparent 85%),
+    linear-gradient(90deg, transparent 15%, hsl(43 100% 50% / 0.06) 30%, transparent 45%, hsl(43 100% 50% / 0.1) 60%, transparent 75%),
+    /* Additional geometric lines */
+    linear-gradient(135deg, transparent 40%, hsl(0 100% 50% / 0.05) 50%, transparent 60%),
+    linear-gradient(-135deg, transparent 35%, hsl(330 100% 50% / 0.04) 45%, transparent 55%);
+  background-size: 800% 800%, 600% 600%, 400% 400%, 300% 300%, 500% 500%;
+  animation: red-wave-flow 20s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Custom scrollbar - Red theme */
+::-webkit-scrollbar-track {
+  background: hsl(0 30% 5%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(0 85% 45% / 0.6);
+  border-radius: 4px;
+  box-shadow: 0 0 10px hsl(0 85% 45% / 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0 85% 45% / 0.8);
+  box-shadow: 0 0 15px hsl(0 85% 45% / 0.6);
+}
+
+/* Component Styles - Red Theme */
+.glass {
+  background: hsl(0 40% 12% / 0.4);
+  backdrop-filter: blur(16px);
+  border: 1px solid hsl(0 60% 25% / 0.3);
+  box-shadow: 
+    0 0 20px hsl(0 0% 0% / 0.5),
+    inset 0 1px 0 hsl(0 100% 100% / 0.1);
+}
+
+.glass-card {
+  background: 
+    radial-gradient(circle at 30% 30%, hsl(0 100% 50% / 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, hsl(15 100% 50% / 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 90%, hsl(43 100% 50% / 0.06) 0%, transparent 50%),
+    linear-gradient(135deg, hsl(0 40% 12% / 0.8), hsl(0 30% 8% / 0.6));
+  backdrop-filter: blur(16px);
+  border: 1px solid hsl(0 100% 100% / 0.1);
+  border-radius: 0.75rem;
+  box-shadow: 
+    0 8px 32px hsl(0 0% 0% / 0.4),
+    0 0 0 1px hsl(0 100% 100% / 0.05),
+    inset 0 1px 0 hsl(0 100% 100% / 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, 
+      hsl(0 100% 50% / 0.04) 0%, 
+      transparent 25%, 
+      hsl(15 100% 50% / 0.04) 50%, 
+      transparent 75%, 
+      hsl(43 100% 50% / 0.04) 100%
+    );
+  border-radius: inherit;
+  animation: crimson-card-glow 8s ease-in-out infinite;
+  z-index: -1;
+}
+
+.gold-glow {
+  text-shadow: 
+    0 0 10px hsl(0 85% 45% / 0.6),
+    0 0 20px hsl(0 85% 45% / 0.4),
+    0 0 30px hsl(0 85% 45% / 0.2);
+}
+
+.card-3d {
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0) rotateY(0);
+}
+
+.card-3d:hover {
+  transform: perspective(1000px) rotateX(-2deg) rotateY(2deg) translateZ(10px);
+  box-shadow: 
+    0 20px 40px hsl(0 85% 45% / 0.12),
+    0 10px 20px hsl(0 0% 0% / 0.5),
+    0 0 30px hsl(0 100% 50% / 0.12),
+    0 0 40px hsl(15 100% 50% / 0.1),
+    0 0 50px hsl(43 100% 50% / 0.08);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, hsl(0 85% 45%), hsl(0 85% 60%), hsl(0 85% 45%));
+  color: hsl(0 0% 5%);
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 15px hsl(0 85% 45% / 0.4),
+    0 0 20px hsl(0 85% 45% / 0.3);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px hsl(0 85% 45% / 0.5),
+    0 0 30px hsl(0 85% 45% / 0.4);
+}
+
+.btn-category {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, hsl(0 40% 15% / 0.8), hsl(0 30% 10% / 0.6));
+  color: hsl(0 85% 75%);
+  border: 1px solid hsl(0 60% 25% / 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 2px 8px hsl(0 0% 0% / 0.3),
+    inset 0 1px 0 hsl(0 100% 100% / 0.1);
+}
+
+.btn-category:hover {
+  border-color: hsl(0 85% 45%);
+  background: 
+    radial-gradient(circle at 50% 50%, hsl(0 85% 45% / 0.12) 0%, transparent 70%),
+    linear-gradient(135deg, hsl(0 50% 18% / 0.8), hsl(0 40% 12% / 0.6));
+  box-shadow: 
+    0 4px 12px hsl(0 85% 45% / 0.25),
+    0 0 20px hsl(0 85% 45% / 0.15);
+}
+
+.btn-category.active {
+  color: hsl(0 0% 5%);
+  border-color: transparent;
+  background: linear-gradient(135deg, hsl(0 85% 45%), hsl(0 85% 60%), hsl(0 85% 45%));
+  box-shadow: 
+    0 4px 15px hsl(0 85% 45% / 0.4),
+    0 0 25px hsl(0 85% 45% / 0.3);
+}
+
+.star {
+  color: hsl(0 85% 45%);
+  filter: drop-shadow(0 0 2px hsl(0 85% 45% / 0.6));
+}
+
+.star-empty {
+  color: hsl(0 20% 60%);
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+  background: linear-gradient(135deg, hsl(0 40% 12% / 0.8), hsl(0 30% 8% / 0.6));
+  border: 1px solid hsl(0 60% 25% / 0.3);
+  border-radius: 0.5rem;
+  color: hsl(0 85% 85%);
+  transition: all 0.3s ease;
+  box-shadow: 
+    inset 0 2px 4px hsl(0 0% 0% / 0.2),
+    0 0 0 1px hsl(0 100% 100% / 0.05);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: hsl(0 85% 45%);
+  box-shadow: 
+    inset 0 2px 4px hsl(0 0% 0% / 0.2),
+    0 0 0 1px hsl(0 85% 45% / 0.4),
+    0 0 20px hsl(0 85% 45% / 0.15);
+}
+
+.search-input::placeholder {
+  color: hsl(0 20% 60%);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, hsl(0 30% 0% / 0.9) 0%, hsl(0 40% 0% / 0.7) 100%);
+  backdrop-filter: blur(16px);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ingredient-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, hsl(0 40% 15% / 0.8), hsl(0 30% 10% / 0.6));
+  color: hsl(0 85% 75%);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  border: 1px solid hsl(0 60% 25% / 0.2);
+  box-shadow: 
+    0 2px 4px hsl(0 0% 0% / 0.2),
+    inset 0 1px 0 hsl(0 100% 100% / 0.1);
+}
+
+/* Animations - Red Theme */
+@keyframes crimson-flow {
+  0%, 100% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateX(-10px) translateY(-5px) scale(1.02);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(5px) translateY(10px) scale(0.98);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateX(8px) translateY(-8px) scale(1.01);
+    opacity: 0.9;
+  }
+}
+
+@keyframes red-wave-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes crimson-card-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scale-in {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+.spice-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 4px currentColor;
+}
+
+/* Spice colors - Red theme */
+.bg-spice-1 { background-color: hsl(45 70% 50%); }
+.bg-spice-2 { background-color: hsl(25 85% 50%); }
+.bg-spice-3 { background-color: hsl(15 95% 50%); }
+.bg-spice-4 { background-color: hsl(5 100% 50%); }
+.bg-spice-5 { background-color: hsl(0 100% 45%); }
+
+/* Color utilities - Red theme */
+.text-gold { color: hsl(0 85% 45%); }
+.text-gold-light { color: hsl(0 85% 60%); }
+.text-muted { color: hsl(0 20% 60%); }
+.text-background { color: hsl(0 0% 5%); }
+.bg-gradient-gold { background: linear-gradient(135deg, hsl(0 85% 45%), hsl(0 85% 60%), hsl(0 85% 45%)); }
