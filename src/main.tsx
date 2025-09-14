@@ -15,7 +15,7 @@ const loadTheme = () => {
   // Create and append new theme CSS link
   const themeLink = document.createElement('link');
   themeLink.rel = 'stylesheet';
-  themeLink.href = `/src/themes/${restaurantConfig.theme_name}.css`;
+  themeLink.href = `/themes/${restaurantConfig.theme_name}.css`;
   themeLink.setAttribute('data-theme', restaurantConfig.theme_name);
   
   document.head.appendChild(themeLink);
