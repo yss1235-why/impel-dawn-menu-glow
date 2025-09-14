@@ -19,13 +19,13 @@
   --primary-glow: 0 85% 55%;
   --primary-shimmer: 0 85% 70%;
   
-  /* Secondary Dark Burgundy Colors */
-  --secondary: 0 60% 15%;
-  --secondary-foreground: 0 85% 75%;
+  /* Secondary Light Colors */
+  --secondary: 45 15% 88%;
+  --secondary-foreground: 0 75% 30%;
   
   /* Muted Colors */
-  --muted: 0 30% 20%;
-  --muted-foreground: 0 20% 60%;
+  --muted: 45 10% 85%;
+  --muted-foreground: 0 20% 45%;
   
   /* Accent Gold Colors (Luxury Touch) */
   --accent: 43 100% 50%;
@@ -37,8 +37,8 @@
   --destructive-foreground: 0 0% 98%;
   
   /* Border & Input */
-  --border: 0 60% 25%;
-  --input: 0 40% 8%;
+  --border: 0 20% 80%;
+  --input: 45 20% 95%;
   --ring: 0 85% 45%;
   
   /* Red/Gold Variations */
@@ -85,22 +85,11 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   background: 
-    /* Abstract dot pattern */
-    radial-gradient(circle 2px at 20px 30px, hsl(0 85% 45% / 0.15), transparent),
-    radial-gradient(circle 2px at 40px 70px, hsl(15 85% 50% / 0.1), transparent), 
-    radial-gradient(circle 1px at 90px 40px, hsl(43 85% 50% / 0.12), transparent),
-    radial-gradient(circle 1px at 130px 80px, hsl(0 85% 45% / 0.08), transparent),
-    /* Diagonal line pattern */
-    linear-gradient(45deg, transparent 40%, hsl(0 85% 45% / 0.03) 41%, hsl(0 85% 45% / 0.03) 42%, transparent 43%),
-    linear-gradient(-45deg, transparent 60%, hsl(15 85% 50% / 0.02) 61%, hsl(15 85% 50% / 0.02) 62%, transparent 63%),
-    /* Abstract organic shapes */
-    radial-gradient(ellipse 200px 300px at 15% 20%, hsl(0 85% 45% / 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse 150px 200px at 85% 80%, hsl(15 85% 50% / 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 300px 150px at 60% 40%, hsl(43 85% 50% / 0.04) 0%, transparent 70%),
-    /* Geometric triangular patterns */
-    conic-gradient(from 0deg at 25% 75%, transparent 0deg, hsl(0 85% 45% / 0.02) 60deg, transparent 120deg),
-    conic-gradient(from 45deg at 75% 25%, transparent 0deg, hsl(15 85% 50% / 0.015) 90deg, transparent 180deg),
-    /* Base gradient - Cream/ivory background */
+    /* Triangular Pattern - Dense like your reference */
+    conic-gradient(from 0deg, transparent 120deg, hsl(0 85% 45% / 0.15) 120deg, hsl(0 85% 45% / 0.15) 240deg, transparent 240deg),
+    conic-gradient(from 60deg, transparent 120deg, hsl(0 85% 45% / 0.12) 120deg, hsl(0 85% 45% / 0.12) 240deg, transparent 240deg),
+    conic-gradient(from 120deg, transparent 120deg, hsl(0 85% 45% / 0.1) 120deg, hsl(0 85% 45% / 0.1) 240deg, transparent 240deg),
+    /* Base cream background */
     linear-gradient(135deg, 
       hsl(45 25% 92%) 0%, 
       hsl(40 30% 94%) 25%, 
@@ -109,18 +98,15 @@ body {
       hsl(45 25% 92%) 100%
     );
   background-size: 
-    160px 110px,
-    140px 130px, 
-    120px 90px,
-    180px 140px,
-    80px 80px,
-    100px 100px,
-    400px 500px,
-    350px 400px,
-    500px 300px,
-    200px 200px,
-    250px 250px,
+    20px 20px,
+    20px 20px, 
+    20px 20px,
     100% 100%;
+  background-position:
+    0px 0px,
+    10px 10px,
+    5px 15px,
+    0px 0px;
 }
 body::before {
   content: '';
