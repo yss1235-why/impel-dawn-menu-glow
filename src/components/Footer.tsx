@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex items-center justify-center gap-2">
           <span className="text-sm text-muted-foreground">Follow us:</span>
           
-            href="https://www.instagram.com/innovative_archive"
+            <a href="https://www.instagram.com/innovative_archive"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gold hover:text-gold-light transition-colors duration-300 text-sm font-medium"
