@@ -1,4 +1,4 @@
 export const restaurantConfig = {
-  res_name: "IMPEL DAWN",
-  theme_name: "gold" // Options: "gold", "blue", "purple", "red"
+  res_name: "Your's Cafe",
+  theme_name: "red" // Options: "gold", "blue", "purple", "red"
 };
