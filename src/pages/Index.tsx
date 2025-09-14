@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import CategoryNav from '../components/CategoryNav';
 import MenuCard from '../components/MenuCard';
 import MenuModal from '../components/MenuModal';
+import Footer from '../components/Footer';
 import { menuItems, categories } from '../data/menuData';
 import { MenuItem } from '../types/menu';
 
@@ -137,7 +138,9 @@ const Index = () => {
             ))}
           </div>
         )}
-      </main>
+     </main>
+
+      <Footer />
 
       <MenuModal
         item={selectedItem}
