@@ -468,3 +468,63 @@ body::after {
 .text-muted { color: hsl(0 20% 60%); }
 .text-background { color: hsl(0 0% 5%); }
 .bg-gradient-gold { background: linear-gradient(135deg, hsl(0 85% 45%), hsl(0 85% 60%), hsl(0 85% 45%)); }
+
+/* Color utilities - Red theme */
+.text-gold { color: hsl(0 85% 45%); }
+.text-gold-light { color: hsl(0 85% 60%); }
+.text-muted { color: hsl(0 20% 60%); }
+.text-background { color: hsl(0 0% 5%); }
+.bg-gradient-gold { background: linear-gradient(135deg, hsl(0 85% 45%), hsl(0 85% 60%), hsl(0 85% 45%)); }
+
+/* Restaurant Name Calligraphy Styling */
+.restaurant-name {
+  font-family: 'Dancing Script', 'Great Vibes', cursive;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 20px hsl(0 85% 45% / 0.6),
+    0 0 40px hsl(0 85% 45% / 0.4),
+    0 0 60px hsl(0 85% 45% / 0.2),
+    2px 2px 4px hsl(0 0% 0% / 0.3);
+  background: linear-gradient(135deg, 
+    hsl(0 85% 45%) 0%, 
+    hsl(0 85% 35%) 25%, 
+    hsl(43 100% 50%) 50%, 
+    hsl(0 85% 35%) 75%, 
+    hsl(0 85% 45%) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.restaurant-name::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    hsl(0 85% 45%) 20%, 
+    hsl(43 100% 50%) 50%, 
+    hsl(0 85% 45%) 80%, 
+    transparent 100%
+  );
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.restaurant-name:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.restaurant-name:hover::after {
+  box-shadow: 0 0 15px hsl(0 85% 45% / 0.6);
+  transition: all 0.3s ease;
+}
