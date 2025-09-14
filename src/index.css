@@ -19,13 +19,14 @@
   }
   
   body {
+    @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
   }
   
-  /* Custom scrollbar - universal structure */
+  /* Custom scrollbar - universal structure only */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
