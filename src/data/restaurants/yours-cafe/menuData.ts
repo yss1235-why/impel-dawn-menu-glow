@@ -78,7 +78,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.4,
     emoji: '🍵',
-    image: '/images/menu/yours-cafe/matcha.webp'
+    image: '/images/menu/yours-cafe/coffeeMacha.webp'
   },
   {
     id: 'yc7',
@@ -91,10 +91,9 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.7,
     emoji: '☕',
-    image: '/images/menu/yours-cafe/mocha.webp'
+    image: '/images/menu/yours-cafe/coffeeMacha.webp'
   },
 
-  // Tea
   {
     id: 'yc8',
     name: 'Red Tea',
@@ -161,7 +160,6 @@ export const yoursCafeMenuItems: MenuItem[] = [
     image: '/images/menu/yours-cafe/milk-tea.webp'
   },
 
-  // Flavoured Coffee
   {
     id: 'yc13',
     name: 'Hazelnut Coffee',
@@ -202,7 +200,6 @@ export const yoursCafeMenuItems: MenuItem[] = [
     image: '/images/menu/yours-cafe/vanilla-coffee.webp'
   },
 
-  // Cold Beverages
   {
     id: 'yc16',
     name: 'Iced Americano',
@@ -227,7 +224,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.6,
     emoji: '🧊',
-    image: '/images/menu/yours-cafe/iced-latte.webp'
+    image: '/images/menu/yours-cafe/iceLatte.webp'
   },
   {
     id: 'yc18',
@@ -266,7 +263,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.4,
     emoji: '🍹',
-    image: '/images/menu/yours-cafe/virgin-mojito.webp'
+    image: '/images/menu/yours-cafe/mogitoBlueLegoon.webp'
   },
   {
     id: 'yc21',
@@ -308,7 +305,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     image: '/images/menu/yours-cafe/flavoured-latte.webp'
   },
 
-  // Shakes
+
   {
     id: 'yc24',
     name: 'Banana Shake',
@@ -333,7 +330,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.6,
     emoji: '🍓',
-    image: '/images/menu/yours-cafe/strawberry-shake.webp'
+    image: '/images/menu/yours-cafe/strawberryShake.webp'
   },
   {
     id: 'yc26',
@@ -401,7 +398,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     image: '/images/menu/yours-cafe/green-apple-shake.webp'
   },
 
-  // Fresh Juice
+ 
   {
     id: 'yc31',
     name: 'Grape Juice',
@@ -442,7 +439,6 @@ export const yoursCafeMenuItems: MenuItem[] = [
     image: '/images/menu/yours-cafe/strawberry-juice.webp'
   },
 
-  // Fried Rice
   {
     id: 'yc34',
     name: 'Chicken Fried Rice',
@@ -454,7 +450,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.5,
     emoji: '🍚',
-    image: '/images/menu/yours-cafe/chicken-fried-rice.webp'
+    image: '/images/menu/yours-cafe/friedRice.webp'
   },
   {
     id: 'yc35',
@@ -467,7 +463,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.6,
     emoji: '🍚',
-    image: '/images/menu/yours-cafe/pork-fried-rice.webp'
+    image: '/images/menu/yours-cafe/friedRice.webp'
   },
   {
     id: 'yc36',
@@ -480,7 +476,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.5,
     emoji: '🍚',
-    image: '/images/menu/yours-cafe/beef-fried-rice.webp'
+    image: '/images/menu/yours-cafe/friedRice.webp'
   },
   {
     id: 'yc37',
@@ -493,7 +489,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.3,
     emoji: '🍚',
-    image: '/images/menu/yours-cafe/egg-fried-rice.webp'
+    image: '/images/menu/yours-cafe/friedRice.webpp'
   },
   {
     id: 'yc38',
@@ -506,7 +502,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.2,
     emoji: '🍚',
-    image: '/images/menu/yours-cafe/vegetable-fried-rice.webp'
+    image: '/images/menu/yours-cafe/friedRice.webp'
   },
   {
     id: 'yc39',
@@ -519,10 +515,9 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.7,
     emoji: '🍚',
-    image: '/images/menu/yours-cafe/mixed-fried-rice.webp'
+    image: '/images/menu/yours-cafe/friedRice.webp'
   },
 
-  // Fries & Chicken
   {
     id: 'yc40',
     name: 'Crispy Chicken',
@@ -534,7 +529,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.6,
     emoji: '🍗',
-    image: '/images/menu/yours-cafe/crispy-chicken.webp'
+    image: '/images/menu/yours-cafe/chickenChilli.webp'
   },
   {
     id: 'yc41',
@@ -547,7 +542,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.7,
     emoji: '🍗',
-    image: '/images/menu/yours-cafe/chicken-wings.webp'
+    image: '/images/menu/yours-cafe/chickenWings.webp'
   },
   {
     id: 'yc42',
@@ -560,7 +555,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.5,
     emoji: '🍗',
-    image: '/images/menu/yours-cafe/chicken-lollipop.webp'
+    image: '/images/menu/yours-cafe/chickenWings.webp'
   },
   {
     id: 'yc43',
@@ -573,7 +568,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.3,
     emoji: '🍟',
-    image: '/images/menu/yours-cafe/french-fries.webp'
+    image: '/images/menu/yours-cafe/frenchFries.webp'
   },
   {
     id: 'yc44',
@@ -586,7 +581,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.6,
     emoji: '🍗',
-    image: '/images/menu/yours-cafe/chicken-nuggets.webp'
+    image: '/images/menu/yours-cafe/nuggets.webp'
   },
   {
     id: 'yc45',
@@ -599,10 +594,10 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.4,
     emoji: '🍗',
-    image: '/images/menu/yours-cafe/chicken-meatball.webp'
+    image: '/images/menu/yours-cafe/nuggets.webp'
   },
 
-  // Chili Items
+  
   {
     id: 'yc46',
     name: 'Beef Chili',
@@ -627,7 +622,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 4,
     rating: 4.5,
     emoji: '🌶️',
-    image: '/images/menu/yours-cafe/chicken-chili.webp'
+    image: '/images/menu/yours-cafe/chickenChilli.webp'
   },
   {
     id: 'yc48',
@@ -643,7 +638,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     image: '/images/menu/yours-cafe/pork-chili.webp'
   },
 
-  // Corn Dog & Snacks
+
   {
     id: 'yc49',
     name: 'Corn Dog',
@@ -655,7 +650,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.2,
     emoji: '🌭',
-    image: '/images/menu/yours-cafe/corn-dog.webp'
+    image: '/images/menu/yours-cafe/cornDog.webp'
   },
   {
     id: 'yc50',
@@ -668,7 +663,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.3,
     emoji: '🌭',
-    image: '/images/menu/yours-cafe/chicken-corn-dog.webp'
+    image: '/images/menu/yours-cafe/cornDog.webp'
   },
   {
     id: 'yc51',
@@ -681,10 +676,10 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.4,
     emoji: '🌭',
-    image: '/images/menu/yours-cafe/pork-corn-dog.webp'
+    image: '/images/menu/yours-cafe/cornDog.webp'
   },
 
-  // Noodles
+ 
   {
     id: 'yc52',
     name: 'Chicken Noodles',
@@ -696,7 +691,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.5,
     emoji: '🍝',
-    image: '/images/menu/yours-cafe/chicken-noodles.webp'
+    image: '/images/menu/yours-cafe/ramen.webp'
   },
   {
     id: 'yc53',
@@ -709,7 +704,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.6,
     emoji: '🍝',
-    image: '/images/menu/yours-cafe/pork-noodles.webp'
+    image: '/images/menu/yours-cafe/ramen.webp'
   },
   {
     id: 'yc54',
@@ -722,7 +717,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.5,
     emoji: '🍝',
-    image: '/images/menu/yours-cafe/beef-noodles.webp'
+    image: '/images/menu/yours-cafe/ramen.webp'
   },
   {
     id: 'yc55',
@@ -735,7 +730,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.3,
     emoji: '🍝',
-    image: '/images/menu/yours-cafe/egg-noodles.webp'
+    image: '/images/menu/yours-cafe/ramen.webp'
   },
   {
     id: 'yc56',
@@ -748,7 +743,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.2,
     emoji: '🍝',
-    image: '/images/menu/yours-cafe/vegetable-noodles.webp'
+    image: '/images/menu/yours-cafe/ramen.webp'
   },
   {
     id: 'yc57',
@@ -761,10 +756,10 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.7,
     emoji: '🍝',
-    image: '/images/menu/yours-cafe/mixed-noodles.webp'
+    image: '/images/menu/yours-cafe/ramen.webp'
   },
 
-  // Pasta
+
   {
     id: 'yc58',
     name: 'Chicken Pasta - White Sauce',
@@ -776,7 +771,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.6,
     emoji: '🍝',
-    image: '/images/menu/yours-cafe/chicken-white-pasta.webp'
+    image: '/images/menu/yours-cafe/pasta.webp'
   },
   {
     id: 'yc59',
@@ -789,7 +784,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.4,
     emoji: '🍝',
-    image: '/images/menu/yours-cafe/vegetable-white-pasta.webp'
+    image: '/images/menu/yours-cafe/pasta.webp'
   },
   {
     id: 'yc60',
@@ -802,7 +797,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.5,
     emoji: '🍝',
-    image: '/images/menu/yours-cafe/red-chicken-pasta.webp'
+    image: '/images/menu/yours-cafe/pasta.webp'
   },
   {
     id: 'yc61',
@@ -815,10 +810,10 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.3,
     emoji: '🍝',
-    image: '/images/menu/yours-cafe/red-vegetable-pasta.webp'
+    image: '/images/menu/yours-cafe/pasta.webp'
   },
 
-  // Ramen
+ 
   {
     id: 'yc62',
     name: 'Soup Ramen (Pork/Beef/Chicken)',
@@ -830,7 +825,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.7,
     emoji: '🍜',
-    image: '/images/menu/yours-cafe/soup-ramen.webp'
+    image: '/images/menu/yours-cafe/ramen.webp'
   },
   {
     id: 'yc63',
@@ -843,7 +838,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 4,
     rating: 4.6,
     emoji: '🍜',
-    image: '/images/menu/yours-cafe/spicy-ramen.webp'
+    image: '/images/menu/yours-cafe/ramen.webp'
   },
   {
     id: 'yc64',
@@ -856,7 +851,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.4,
     emoji: '🍜',
-    image: '/images/menu/yours-cafe/egg-soup-ramen.webp'
+    image: '/images/menu/yours-cafe/ramen.webp'
   },
   {
     id: 'yc65',
@@ -869,10 +864,10 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 3,
     rating: 4.5,
     emoji: '🍜',
-    image: '/images/menu/yours-cafe/spicy-egg-ramen.webp'
+    image: '/images/menu/yours-cafe/ramen.webp'
   },
 
-  // Momo
+ 
   {
     id: 'yc66',
     name: 'Chicken Momo',
@@ -884,7 +879,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.6,
     emoji: '🥟',
-    image: '/images/menu/yours-cafe/chicken-momo.webp'
+    image: '/images/menu/yours-cafe/momo.webp'
   },
   {
     id: 'yc67',
@@ -897,10 +892,10 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.7,
     emoji: '🥟',
-    image: '/images/menu/yours-cafe/pork-momo.webp'
+    image: '/images/menu/yours-cafe/momo.webp'
   },
 
-  // Sausage
+
   {
     id: 'yc68',
     name: 'Chicken Sausage',
@@ -928,7 +923,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     image: '/images/menu/yours-cafe/pork-sausage.webp'
   },
 
-  // Pastry
+
   {
     id: 'yc70',
     name: 'Strawberry Pastry',
@@ -982,7 +977,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     image: '/images/menu/yours-cafe/black-forest-pastry.webp'
   },
 
-  // Cheese Cake
+ 
   {
     id: 'yc74',
     name: 'Strawberry Cheese Cake',
@@ -994,7 +989,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.8,
     emoji: '🍰',
-    image: '/images/menu/yours-cafe/strawberry-cheesecake.webp'
+    image: '/images/menu/yours-cafe/strawberryCheeseCake.webp'
   },
   {
     id: 'yc75',
@@ -1007,10 +1002,10 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.7,
     emoji: '🍰',
-    image: '/images/menu/yours-cafe/blueberry-cheesecake.webp'
+    image: '/images/menu/yours-cafe/strawberryCheeseCake.webp'
   },
 
-  // Cookies
+
   {
     id: 'yc76',
     name: 'Coconut Cookies',
@@ -1038,7 +1033,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     image: '/images/menu/yours-cafe/butter-cookies.webp'
   },
 
-  // Sandwich
+ 
   {
     id: 'yc78',
     name: 'Chicken Sandwich',
@@ -1079,7 +1074,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     image: '/images/menu/yours-cafe/vegetable-sandwich.webp'
   },
 
-  // Burger
+
   {
     id: 'yc81',
     name: 'Chicken Burger',
@@ -1091,7 +1086,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.5,
     emoji: '🍔',
-    image: '/images/menu/yours-cafe/chicken-burger.webp'
+    image: '/images/menu/yours-cafe/burger.webp'
   },
   {
     id: 'yc82',
@@ -1104,7 +1099,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.2,
     emoji: '🍔',
-    image: '/images/menu/yours-cafe/egg-burger.webp'
+    image: '/images/menu/yours-cafe/burger.webp'
   },
   {
     id: 'yc83',
@@ -1117,10 +1112,10 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.1,
     emoji: '🍔',
-    image: '/images/menu/yours-cafe/vegetable-burger.webp'
+    image: '/images/menu/yours-cafe/burger.webp'
   },
 
-  // Omelette
+ 
   {
     id: 'yc84',
     name: 'Simple Omelette',
@@ -1187,7 +1182,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     image: '/images/menu/yours-cafe/lacha-paratha-beef.webp'
   },
 
-  // Pizza
+
   {
     id: 'yc89',
     name: 'Vegetable Pizza',
@@ -1199,7 +1194,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.3,
     emoji: '🍕',
-    image: '/images/menu/yours-cafe/vegetable-pizza.webp'
+    image: '/images/menu/yours-cafe/pizza.webp'
   },
   {
     id: 'yc90',
@@ -1212,7 +1207,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.5,
     emoji: '🍕',
-    image: '/images/menu/yours-cafe/chicken-pizza.webp'
+    image: '/images/menu/yours-cafe/pizza.webp'
   },
   {
     id: 'yc91',
@@ -1225,7 +1220,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.6,
     emoji: '🍕',
-    image: '/images/menu/yours-cafe/double-cheese-pizza.webp'
+    image: '/images/menu/yours-cafe/pizza.webp'
   },
   {
     id: 'yc92',
@@ -1238,10 +1233,10 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 1,
     rating: 4.7,
     emoji: '🍕',
-    image: '/images/menu/yours-cafe/double-cheese-chicken-pizza.webp'
+    image: '/images/menu/yours-cafe/pizza.webp'
   },
 
-  // Sea Food
+
   {
     id: 'yc93',
     name: 'Prawn',
