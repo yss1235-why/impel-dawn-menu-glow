@@ -13,7 +13,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 0,
     rating: 4.2,
     emoji: '☕',
-    image: '/images/menu/yours-cafe/coffee.webp'
+    image: '/images/menu/yours-cafe/coffee.webp'  
   },
   {
     id: 'yc2',
@@ -1266,7 +1266,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.5,
     emoji: '🐙',
-    image: 'public/images/menu/yours-cafe/octopus.webp'
+    image: '/images/menu/yours-cafe/octopus.webp'
   }
 ];
 
