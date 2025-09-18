@@ -107,7 +107,7 @@ const getCategoryEmoji = (categoryName: string) => {
 };
 
   return (
-   <div className="min-h-screen">
+   <div className="min-h-screen relative">
       <Header searchTerm={searchTerm} onSearchChange={setSearchTerm} />
       
       <CategoryNav
