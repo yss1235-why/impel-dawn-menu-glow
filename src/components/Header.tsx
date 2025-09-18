@@ -5,7 +5,7 @@ const Header = ({ searchTerm, onSearchChange }: { searchTerm: string; onSearchCh
   return (
    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/20">
       <div className="mx-auto px-4 py-4">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4" style={{background: 'transparent'}}>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <h1 className="text-4xl sm:text-5xl restaurant-name">
             {restaurantConfig.res_name}
           </h1>
