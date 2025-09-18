@@ -1266,7 +1266,7 @@ export const yoursCafeMenuItems: MenuItem[] = [
     spiceLevel: 2,
     rating: 4.5,
     emoji: '🐙',
-    image: '/images/menu/yours-cafe/octopus.webp'
+    image: 'public/images/menu/yours-cafe/octopus.webp'
   }
 ];
 
