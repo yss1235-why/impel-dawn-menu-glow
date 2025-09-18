@@ -16,31 +16,31 @@ const Index = () => {
   const [categories, setCategories] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Load menu data dynamically
-  useEffect(() => {
-    const loadMenuData = async () => {
-      try {
-        setLoading(true);
-        const menuDataPath = `restaurants/${restaurantConfig.menu_data}/menuData`;
-        const menuModule = await import(`../data/${menuDataPath}`);
-        
-        if (restaurantConfig.menu_data === 'yours-cafe') {
-          setMenuItems(menuModule.yoursCafeMenuItems);
-          setCategories(menuModule.yoursCafeCategories);
-        } else {
-          setMenuItems(menuModule.menuItems);
-          setCategories(menuModule.categories);
-        }
-      } catch (error) {
-        console.error('Failed to load menu data:', error);
-      } finally {
-        setLoading(false);
+ // Load menu data based on config
+useEffect(() => {
+  const loadMenuData = async () => {
+    try {
+      setLoading(true);
+      
+      if (restaurantConfig.menu_data === 'yours-cafe') {
+        const { yoursCafeMenuItems, yoursCafeCategories } = await import('../data/restaurants/yours-cafe/menuData');
+        setMenuItems(yoursCafeMenuItems);
+        setCategories(yoursCafeCategories);
+      } else {
+        const { menuItems, categories } = await import('../data/restaurants/impel-dawn/menuData');
+        setMenuItems(menuItems);
+        setCategories(categories);
       }
-    };
+    } catch (error) {
+      console.error('Failed to load menu data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    loadMenuData();
-  }, []);
-
+  loadMenuData();
+}, []);
+  
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
