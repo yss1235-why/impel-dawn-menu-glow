@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import Header from '../components/Header';
 import CategoryNav from '../components/CategoryNav';
 import MenuCard from '../components/MenuCard';
@@ -7,66 +7,37 @@ import Footer from '../components/Footer';
 import { restaurantConfig } from '../config/restaurant';
 import { MenuItem } from '../types/menu';
 
+// Static imports for both restaurants
+import { menuItems as impelDawnItems, categories as impelDawnCategories } from '../data/restaurants/impel-dawn/menuData';
+import { yoursCafeMenuItems, yoursCafeCategories } from '../data/restaurants/yours-cafe/menuData';
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('All Items');
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
-  const [categories, setCategories] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
 
- // Load menu data based on config
-useEffect(() => {
-  const loadMenuData = async () => {
-    try {
-      setLoading(true);
-      
-      if (restaurantConfig.menu_data === 'yours-cafe') {
-        const { yoursCafeMenuItems, yoursCafeCategories } = await import('../data/restaurants/yours-cafe/menuData');
-        setMenuItems(yoursCafeMenuItems);
-        setCategories(yoursCafeCategories);
-      } else {
-        const { menuItems, categories } = await import('../data/restaurants/impel-dawn/menuData');
-        setMenuItems(menuItems);
-        setCategories(categories);
-      }
-    } catch (error) {
-      console.error('Failed to load menu data:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  // Select menu data based on config
+  const menuItems = restaurantConfig.menu_data === 'yours-cafe' ? yoursCafeMenuItems : impelDawnItems;
+  const categories = restaurantConfig.menu_data === 'yours-cafe' ? yoursCafeCategories : impelDawnCategories;
+  const filteredItems = useMemo(() => {
+  let items = menuItems;
 
-  loadMenuData();
-}, []);
-  
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-2xl text-gold">Loading menu...</div>
-      </div>
+  // Filter by search term first
+  if (searchTerm) {
+    items = items.filter(item =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.ingredients.some(ing => ing.toLowerCase().includes(searchTerm.toLowerCase()))
     );
   }
-  const filteredItems = useMemo(() => {
-    let items = menuItems;
 
-    // Filter by search term first
-    if (searchTerm) {
-      items = items.filter(item =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.ingredients.some(ing => ing.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
+  // Filter by category
+  if (activeCategory !== 'All Items') {
+    items = items.filter(item => item.category === activeCategory);
+  }
 
-    // Filter by category
-    if (activeCategory !== 'All Items') {
-      items = items.filter(item => item.category === activeCategory);
-    }
-
-    return items;
-  }, [searchTerm, activeCategory]);
+  return items;
+}, [searchTerm, activeCategory]);
 
   // Group items by category for "All Items" view
   const groupedItems = useMemo(() => {
