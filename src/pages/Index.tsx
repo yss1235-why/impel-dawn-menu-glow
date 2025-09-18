@@ -116,7 +116,7 @@ const getCategoryEmoji = (categoryName: string) => {
         onCategoryChange={setActiveCategory}
       />
 
- <main className="container mx-auto px-4 py-8 pt-32 sm:pt-32">
+ <main className="container mx-auto px-4 py-8 pt-26 sm:pt-32">
         {filteredItems.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-2xl text-muted-foreground">No items found</p>
