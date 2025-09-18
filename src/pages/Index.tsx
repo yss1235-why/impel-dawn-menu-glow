@@ -1,10 +1,10 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Header from '../components/Header';
 import CategoryNav from '../components/CategoryNav';
 import MenuCard from '../components/MenuCard';
 import MenuModal from '../components/MenuModal';
 import Footer from '../components/Footer';
-import { menuItems, categories } from '../data/menuData';
+import { restaurantConfig } from '../config/restaurant';
 import { MenuItem } from '../types/menu';
 
 const Index = () => {
@@ -12,7 +12,42 @@ const Index = () => {
   const [activeCategory, setActiveCategory] = useState('All Items');
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
 
+  // Load menu data dynamically
+  useEffect(() => {
+    const loadMenuData = async () => {
+      try {
+        setLoading(true);
+        const menuDataPath = `restaurants/${restaurantConfig.menu_data}/menuData`;
+        const menuModule = await import(`../data/${menuDataPath}`);
+        
+        if (restaurantConfig.menu_data === 'yours-cafe') {
+          setMenuItems(menuModule.yoursCafeMenuItems);
+          setCategories(menuModule.yoursCafeCategories);
+        } else {
+          setMenuItems(menuModule.menuItems);
+          setCategories(menuModule.categories);
+        }
+      } catch (error) {
+        console.error('Failed to load menu data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadMenuData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-2xl text-gold">Loading menu...</div>
+      </div>
+    );
+  }
   const filteredItems = useMemo(() => {
     let items = menuItems;
 
@@ -62,23 +97,43 @@ const Index = () => {
   };
 
   // Get emoji for category
-  const getCategoryEmoji = (categoryName: string) => {
-    const categoryEmojis: { [key: string]: string } = {
-      'Ramen': '🍜',
-      'Noodles': '🍝',
-      'Cup Noodles': '🍲',
-      'Rolls': '🌯',
-      'Dumplings': '🥟',
-      'Burger': '🍔',
-      'Chili': '🌶️',
-      'Fried Rice': '🍚',
-      'Special': '⭐',
-      'Cold Brew': '🧊',
-      'Shakes': '🥤',
-      'Hot Beverage': '☕'
-    };
-    return categoryEmojis[categoryName] || '🍽️';
+const getCategoryEmoji = (categoryName: string) => {
+  const categoryEmojis: { [key: string]: string } = {
+    // Impel Dawn categories
+    'Ramen': '🍜',
+    'Noodles': '🍝',
+    'Cup Noodles': '🍲',
+    'Rolls': '🌯',
+    'Dumplings': '🥟',
+    'Burger': '🍔',
+    'Chili': '🌶️',
+    'Fried Rice': '🍚',
+    'Special': '⭐',
+    'Cold Brew': '🧊',
+    'Shakes': '🥤',
+    'Hot Beverage': '☕',
+    
+    // Your's Cafe categories
+    'Hot Coffee': '☕',
+    'Tea': '🍵',
+    'Flavoured Coffee': '☕',
+    'Cold Beverages': '🧊',
+    'Fresh Juice': '🧃',
+    'Fries & Chicken': '🍗',
+    'Snacks': '🍿',
+    'Pasta': '🍝',
+    'Momo': '🥟',
+    'Sausage': '🌭',
+    'Pastry': '🥐',
+    'Desserts': '🍰',
+    'Cookies': '🍪',
+    'Sandwich': '🥪',
+    'Omelette': '🍳',
+    'Pizza': '🍕',
+    'Sea Food': '🦐'
   };
+  return categoryEmojis[categoryName] || '🍽️';
+};
 
   return (
    <div className="min-h-screen">
